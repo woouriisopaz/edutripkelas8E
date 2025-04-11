@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agama - Edutrip</title>
+
+  <style>
+    :root {
+      --background: #fffdeb;
+      --dot: #f9e5a9;
+      --sidebar: #fff1b8;
+      --card: #fff8d9;
+      --text: #3a2a2a;
+      --hover: #e6c85a;
+      --accent: #f9e5a9;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      background-image: radial-gradient(var(--dot) 3px, transparent 3px);
+      background-size: 30px 30px;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 1s ease;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: var(--sidebar);
+      padding: 25px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #a67c00;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      background-color: var(--accent);
+      color: var(--text);
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: var(--hover);
+      color: white;
+      animation: bounce 0.6s;
+    }
+
+    .content {
+      flex: 1;
+      background-color: var(--card);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fadeIn 1.4s ease;
+    }
+
+    .content h1 {
+      font-size: 32px;
+      margin-top: 0;
+      color: #a67c00;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: zoomIn 1s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="pkn.html">PKN</a>
+      <a href="bahasainggris.html">Bahasa Inggris</a>
+      <a href="ips.html">IPS</a>
+      <a href="mandarin.html">Bahasa Mandarin</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    </div>
+
+    <div class="content">
+      <h1>Halaman Agama</h1>
+      <p>
+        Saya mengunjungi Gereja Sumur Kitiran Mas saat edutrip dan belajar mengenai sejarah gereja itu.
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/St_Mary_Assumpta_Pakem_Church.jpg/800px-St_Mary_Assumpta_Pakem_Church.jpg" width="500" height="300" alt="Tempat Ibadah">
+    </div>
+  </div>
+</body>
+</html>

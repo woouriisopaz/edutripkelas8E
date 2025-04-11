@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Edutrip!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      min-height: 100vh;
+    }
+
+    body {
+      background: radial-gradient(#79a5cc 2px, transparent 2px),
+                  radial-gradient(#0d416d 2px, transparent 2px);
+      background-color: #ffffff;
+      background-position: 0 0, 25px 25px;
+      background-size: 50px 50px;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.5); /* lebih transparan */
+      z-index: 0;
+      pointer-events: none; /* biar tidak mengganggu klik */
+    }
+
+    /* Bar Selamat Datang */
+    .top-bar {
+      background: linear-gradient(to right, #8ec5fc, #e0c3fc);
+      color: #003965;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: linear-gradient(to bottom, #b8d6e4, #dbeeff);
+      width: 200px;
+      height: 100vh;
+      position: fixed;
+      top: 50px;
+      left: 0;
+      padding-top: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(8px);
+      z-index: 2;
+    }
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 15px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      background: linear-gradient(135deg, #1d5d7b, #4a90e2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background: linear-gradient(135deg, #032532, #155478);
+      transform: scale(1.08);
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 50px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 50px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.8); /* lebih transparan */
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #003965;
+      margin-bottom: 20px;
+      animation: fadeInDown 1.5s ease;
+      letter-spacing: -1px;
+    }
+
+    p {
+      font-size: 19px;
+      color: #222;
+      margin: 20px 0;
+      animation: fadeInUp 2s ease;
+      -webkit-text-stroke: 0.3px black;
+      letter-spacing: 0px;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+
+    .photo-container {
+      margin-top: 30px;
+      animation: fadeIn 2.5s ease;
+    }
+
+    .photo-container img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      opacity: 0.9;
+      transition: 0.4s;
+    }
+
+    .photo-container img:hover {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+        background: linear-gradient(to right, #b8d6e4, #dbeeff);
+      }
+      nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      main {
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .content-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">Selamat Datang!</div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="agama.html">Agama</a></li>
+      <li><a href="pkn.html">PKN</a></li>
+      <li><a href="bahasainggris.html">Bahasa Inggris</a></li>
+      <li><a href="ips.html">IPS</a></li>
+      <li><a href="bahasamandarin.html">Bahasa Mandarin</a></li>
+      <li><a href="bahasaindonesia.html">Bahasa Indonesia</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content-box">
+      <h1>Academic Prompt Educational Trip</h1>
+
+      <p>Educational trip atau yang biasa dikenal dengan edutrip adalah program sekolah di mana murid-murid dapat memilih destinasi yang sudah ditentukan untuk belajar di luar lingkungan sekolah. Mereka dapat belajar untuk mengembangkan kemandirian, mempelajari budaya, dan banyak lagi.</p>
+
+      <p>Untuk edutrip ini, saya memilih destinasi ke Yogyakarta.</p>
+
+      <div class="photo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Yogyakarta_Indonesia_Tugu-Yogyakarta-02.jpg" alt="Tugu Yogyakarta">
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

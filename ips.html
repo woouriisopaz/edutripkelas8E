@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPS - Edutrip</title>
+
+  <style>
+    :root {
+      --background: #f9fdf9;
+      --dot: #e6f4ea;
+      --sidebar: #edf7ef;
+      --card: #f4fbf5;
+      --text: #324634;
+      --hover: #aacfb1;
+      --accent: #d9f2dc;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background);
+      background-image: radial-gradient(var(--dot) 3px, transparent 3px);
+      background-size: 30px 30px;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: var(--sidebar);
+      padding: 25px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #5f7c5a;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      background-color: var(--accent);
+      color: var(--text);
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      background-color: var(--hover);
+      color: white;
+    }
+
+    .content {
+      flex: 1;
+      background-color: var(--card);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .content h1 {
+      font-size: 32px;
+      margin-top: 0;
+      color: #5f7c5a;
+    }
+
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+/* Tambahan Animasi */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Terapkan animasi ke elemen */
+.sidebar {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.content {
+  animation: fadeInUp 1s ease 0.5s forwards;
+  opacity: 0; /* supaya animasi kelihatan */
+}
+
+.content img {
+  animation: zoomIn 1s ease 1s forwards;
+  opacity: 0; /* supaya animasi kelihatan */
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+     
+      <a href="index.html">Home</a>
+      <a href="agama.html">Agama</a>
+      <a href="pkn.html">PKN</a>
+      <a href="bahasainggris.html">Bahasa Inggris</a>
+      <a href="ips.html">IPS</a>
+      <a href="mandarin.html">Bahasa Mandarin</a>
+      <a href="bahasaindonesia.html">Bahasa Indonesia</a>
+    </div>
+
+    <div class="content">
+      <h1>Halaman IPS</h1>
+      <p>
+        Dalam pelajaran IPS, saya diminta untuk mengobservasi lingkungan di area sekitar Candi Prambanan.
+        
+      <img src="https://awsimages.detik.net.id/community/media/visual/2023/03/21/ribuan-umat-hindu-ikuti-tawur-agung-kesanga-di-candi-prambanan-2.jpeg?w=1200" width="600" height="400" alt="Pembelajaran IPS">
+    </div>
+  </div>
+</body>
+</html>
